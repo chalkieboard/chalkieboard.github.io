@@ -44,7 +44,7 @@ be interpreted (Section 5). The audio itself never leaves the device in any case
 | Voice Commands transcribed text | On the device — sent to TypeSafe only if you entered a TypeSafe key (Section 5) | No |
 | The teacher's voice feature values | On the device (Keychain) | No |
 | Classroom scene estimate (scene name, time of change) | In device memory — erased when the class ends. 7 days if 'Keep Class Timeline' is on | No |
-| Voice decision log | On the device (excluded from sync and backup) — up to 30 days or 50MB (Section 8) | No |
+| Voice decision log | On the device and in your own iCloud Drive (`Chalkieboard/판단기록`, excluded from backup) — up to 30 days or 50MB (Section 8) | No |
 
 **There are no accounts.** Chalkieboard has no sign-up. It does not ask for or collect
 names, email addresses, phone numbers, school names or student information.
@@ -164,11 +164,12 @@ sound and speech are not stored or sent.
 - If you delete the app, the board work, materials and settings on the device are deleted
   with it.
 - **Voice decision log** — To improve Voice Commands, the speech sent to TypeSafe and the
-  interpretation results are kept only on this device. The log is on by default in test
-  builds (TestFlight) and off in the App Store version. Once entries are older than 30 days
-  or the log exceeds 50MB, the oldest entries are deleted first. You can turn it off or
-  delete it in Settings ▸ Voice Control (Beta). It is not synced or backed up, and it
-  leaves the device only when you export it yourself.
+  interpretation results are kept on this device, with a copy in the `판단기록` (decision log)
+  folder inside the `Chalkieboard` folder of your own iCloud Drive. It is not sent to the
+  developer. The log is on by default in test builds (TestFlight) and off in the App Store
+  version. Once entries are older than 30 days or the log exceeds 50MB, the oldest entries are
+  deleted first, copies included. You can turn it off or delete it in Settings ▸ Voice Control
+  (Beta); deleting it also removes that device's copies. It is not included in device backups.
 - **Class timeline** (when 'Keep Class Timeline' is on) — Only scene names and the times
   they changed are kept, for 7 days.
 - The `Chalkieboard` folder in iCloud Drive holds your files, so it remains. If you want to
