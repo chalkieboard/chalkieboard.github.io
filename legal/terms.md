@@ -1,112 +1,121 @@
 ---
-title: 이용약관 — 초키보드
+title: Terms of Use — Chalkieboard
 permalink: /legal/terms/
 ---
 
-# 이용약관 — 초키보드(Chalkieboard)
+# Terms of Use — Chalkieboard
 
-**시행일: 2026년 9월 20일**
+한국어: [이용약관](/ko/legal/terms/)
 
----
-
-## 1. 이 약관이 하는 일
-
-이 약관은 초키보드(이하 "앱")를 쓰는 데 필요한 약속을 정합니다. 앱을 설치해
-쓰시면 이 약관에 동의하신 것으로 봅니다.
+**Effective date: September 24, 2026**
 
 ---
 
-## 2. 앱이 무엇인가
+## 1. What these terms do
 
-초키보드는 초등학교 교사가 수업에서 쓰는 **아이패드 판서 앱**입니다.
-칠판에 쓰고, 수업 자료(PPTX·PDF·HTML·이미지)를 열고, 시간표와 차시로 수업을
-정리하고, 외부 화면으로 송출합니다.
-
----
-
-## 3. 요금
-
-- 앱은 **무료로 받아 쓸 수 있습니다.** 판서·PPT 재생·송출·수업 도구 등 수업 중
-  기능은 모두 무료입니다.
-- 무료로 쓰는 동안 자료는 **10개까지** 담을 수 있습니다.
-- 무료 플랜의 수업은 **수업 시간 잔액**으로 돕니다. 보상형 광고 한 편을 보면
-  1시간이 충전되고, 최대 20시간까지 미리 충전해 둘 수 있습니다. 광고는 사용자가
-  직접 선택해서 볼 때만 나옵니다.
-- **진행 중인 수업은 잔액이 0이 되어도 끊기지 않습니다.** 잔액이 0 이하이면 다음
-  수업을 시작하기 전에 광고를 보거나 구독을 선택하시면 됩니다. 광고를 불러올 수
-  없는 환경(예: 학교 망 차단)에서는 하루 한 번 광고 없이 수업을 시작할 수 있습니다.
-- **초키보드 프로**(자동 갱신 구독)는 수업 시간 무제한, 자료 무제한, iCloud 폴더로
-  맥·윈도우에서 수업을 준비하고 기기 간 동기화하는 기능을 열어 줍니다.
-  가격과 결제 주기는 구매 화면에 표시됩니다. 월간 구독은 App Store가 무료 체험
-  대상자로 인정하고 해당 오퍼가 제공되는 경우에만 1개월 무료 체험이 적용됩니다.
-  연간 구독에는 신규 무료 체험이 없습니다.
-- 결제·환불·구독 관리는 모두 **App Store 규정**을 따릅니다. 환불은 Apple에
-  요청하셔야 하며, 개발자가 직접 처리할 수 없습니다.
-- 구독은 기간이 끝나기 24시간 전까지 해지하지 않으면 자동으로 갱신됩니다.
-  해지는 iOS 설정 ▸ Apple 계정 ▸ 구독에서 하실 수 있습니다.
+These terms set out the agreement needed to use Chalkieboard (the "App"). If you install
+and use the App, you are considered to have agreed to these terms.
 
 ---
 
-## 4. 사용자가 만든 것은 사용자의 것입니다
+## 2. What the App is
 
-판서·수업 자료·시간표 등 사용자가 앱에서 만들거나 불러온 모든 것의 **권리는
-사용자에게 있습니다.** 개발자는 그것을 수집하지도, 보지도, 쓰지도 않습니다.
-
-**보관 책임은 사용자에게 있습니다.** 앱은 기기와 사용자의 iCloud에만 저장하므로,
-기기를 잃거나 앱을 지우면 되살릴 수 없습니다. 중요한 자료는 따로 보관해 주세요.
+Chalkieboard is an **iPad board-writing app** that elementary school teachers use in class.
+It lets you write on the board, open lesson materials (PPTX, PDF, HTML, images), organize
+your classes by timetable and lesson, and send the screen to an external display.
 
 ---
 
-## 5. 자료에 관한 약속
+## 3. Fees
 
-사용자는 자기가 열 권리가 있는 자료만 앱에 불러와야 합니다. 교과서·문제집 등
-저작권이 있는 자료를 권리 없이 배포하는 데 앱을 쓰면 안 됩니다.
-그로 인한 책임은 사용자에게 있습니다.
-
----
-
-## 6. 하시면 안 되는 것
-
-- 앱을 뜯어보거나 고쳐 다시 배포하는 것
-- 결제·수업 시간 잔액·광고 표시를 우회하는 것
-- 앱을 이용해 다른 사람의 권리를 침해하거나 법을 어기는 것
-
----
-
-## 7. 글꼴
-
-앱에는 글꼴이 함께 들어 있지 않습니다. 사용자가 `[폰트]` 폴더에 직접 넣은
-글꼴 파일만 앱이 읽습니다. 그 글꼴의 라이선스를 지킬 책임은 사용자에게 있습니다.
-
----
-
-## 8. 서비스 변경과 중단
-
-개발자는 앱의 기능을 고치거나 더하거나 뺄 수 있습니다. 유료 기능에 크게 영향을
-주는 변경은 앱 안에서 미리 알립니다. 부득이하게 서비스를 접어야 할 때는
-최소 30일 전에 알리고, 남은 구독 기간은 App Store 규정에 따라 처리됩니다.
+- The App is **free to download and use.** All in-class features, such as board writing,
+  PPT playback, external display output and class tools, are free.
+- While you use the App for free, you can hold **up to 10** materials.
+- On the free plan, classes run on a **class time balance**. Watching one rewarded ad adds
+  1 hour, and you can top up in advance to a maximum of 20 hours. Ads appear only when you
+  choose to watch them yourself.
+- **A class in progress is not interrupted, even if the balance reaches 0.** If the balance
+  is 0 or less, you can watch an ad or choose to subscribe before starting the next class.
+  Where ads cannot be loaded (for example, when the school network blocks them), you can
+  start a class without an ad once a day.
+- **Chalkieboard Pro** (an auto-renewing subscription) unlocks unlimited class time,
+  unlimited materials, and the ability to prepare classes on a Mac or Windows PC through
+  the iCloud folder and to sync between devices.
+  The price and billing period are shown on the purchase screen. For the monthly
+  subscription, a 1-month free trial applies only if the App Store recognizes you as
+  eligible for a free trial and the offer is available. The annual subscription has no
+  introductory free trial.
+- Payment, refunds and subscription management all follow **App Store rules**. Refunds
+  must be requested from Apple. The developer cannot process them directly.
+- The subscription renews automatically unless you cancel it at least 24 hours before the
+  end of the current period. You can cancel in iOS Settings ▸ Apple Account ▸ Subscriptions.
 
 ---
 
-## 9. 책임의 한계
+## 4. What you make is yours
 
-앱은 "있는 그대로" 제공됩니다. 개발자는 앱이 모든 기기·모든 자료에서 완전하게
-동작한다고 보증하지 않습니다. 다만 알려진 결함은 성실히 고칩니다.
+The rights to everything you make in or bring into the App, such as board work, lesson
+materials and timetables, **belong to you.** The developer does not collect, view or use
+any of it.
 
-수업 중 앱이 멈추거나 자료가 열리지 않아 생긴 간접적 손해에 대해서는 법이
-허용하는 범위에서 책임을 지지 않습니다. **중요한 수업 전에는 미리 한 번
-열어 보시기를 권합니다.**
-
----
-
-## 10. 준거법
-
-이 약관은 대한민국 법을 따릅니다. 다툼이 생기면 개발자 주소지를 관할하는
-법원을 제1심 관할 법원으로 합니다.
+**You are responsible for keeping it.** The App stores data only on your device and in
+your iCloud, so if you lose the device or delete the App, it cannot be recovered. Please
+keep separate copies of important materials.
 
 ---
 
-## 11. 문의
+## 5. Your commitment about materials
 
-- 이메일: chalkieboard@207studio.dev
-- 개발자: 207 Studio
+You must bring into the App only materials that you have the right to open. You must not
+use the App to distribute copyrighted materials, such as textbooks or workbooks, without
+the right to do so. You are responsible for anything that results from this.
+
+---
+
+## 6. What you must not do
+
+- Taking the App apart, or modifying and redistributing it
+- Getting around payment, the class time balance or ad display
+- Using the App to infringe on other people's rights or to break the law
+
+---
+
+## 7. Fonts
+
+The App does not come with any fonts. The App reads only font files that you put in the `글꼴` (or `Fonts`) folder
+inside the App's iCloud folder, or import into the App yourself. You are responsible for following the licenses of those fonts.
+
+---
+
+## 8. Changes to and discontinuation of the service
+
+The developer may change, add or remove features of the App. Changes that significantly
+affect paid features will be announced in the App in advance. If the service must
+unavoidably be shut down, notice will be given at least 30 days in advance, and any
+remaining subscription period will be handled under App Store rules.
+
+---
+
+## 9. Limitation of liability
+
+The App is provided "as is." The developer does not guarantee that the App will work
+perfectly on every device and with every material. However, the developer will diligently
+fix known defects.
+
+To the extent permitted by law, the developer is not liable for indirect damages caused by
+the App freezing or materials failing to open during class. **Before an important class,
+it is recommended that you open your materials once in advance.**
+
+---
+
+## 10. Governing law
+
+These terms are governed by the laws of the Republic of Korea. If a dispute arises, the
+court with jurisdiction over the developer's address will be the court of first instance.
+
+---
+
+## 11. Contact
+
+- Email: chalkieboard@207studio.dev
+- Developer: 207 Studio

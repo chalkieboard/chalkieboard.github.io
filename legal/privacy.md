@@ -1,174 +1,198 @@
 ---
-title: 개인정보처리방침 — 초키보드
+title: Privacy Policy — Chalkieboard
 permalink: /legal/privacy/
 ---
 
-# 개인정보처리방침 — 초키보드(Chalkieboard)
+# Privacy Policy — Chalkieboard
 
-**시행일: 2026년 9월 24일**
+한국어: [개인정보처리방침](/ko/legal/privacy/)
 
-초키보드는 초등학교 교사가 수업 판서에 쓰는 아이패드 앱입니다. 교실에서 쓰는
-물건이라 **아이들의 정보가 앱에 들어올 일이 없도록 설계**했습니다. 이 문서는
-그 설계를 그대로 적은 것입니다.
+**Effective date: September 24, 2026**
 
----
-
-## 1. 한 줄 요약
-
-**초키보드는 개인정보를 개발자 서버로 보내지 않습니다.** 수업 자료·판서·시간표는 전부
-사용자의 기기와 사용자 본인의 iCloud에만 있습니다. 개발자는 그것을 볼 수 없습니다.
-
-한 가지 예외가 있습니다. **음성 명령(프로)에서 사용자가 직접 TypeSafe API 키를 넣은 경우**,
-말의 뜻을 판단하기 위해 받아쓴 교사의 말(학생 이름이 섞일 수 있습니다)과 화면의 일부 글자가
-미국에 있는 TypeSafe로 전송됩니다(5항). 소리 자체는 어느 경우에도 기기 밖으로 나가지 않습니다.
+Chalkieboard is an iPad app that elementary school teachers use to write on the board
+during lessons. Because it is used in classrooms, it was **designed so that children's
+information has no reason to enter the app**. This document describes that design
+exactly as it is.
 
 ---
 
-## 2. 앱이 다루는 것과 그것이 있는 자리
+## 1. One-line summary
 
-| 무엇 | 어디에 저장되나 | 개발자가 볼 수 있나 |
+**Chalkieboard does not send personal information to the developer's servers.** Your lesson
+materials, board work and timetables are kept only on your device and in your own iCloud.
+The developer cannot see them.
+
+There is one exception. **If you enter your own TypeSafe API key for Voice Commands (Pro)**,
+the teacher's transcribed speech (which may include student names) and some text on the
+screen are sent to TypeSafe in the United States so that the meaning of what was said can
+be interpreted (Section 5). The audio itself never leaves the device in any case.
+
+---
+
+## 2. What the app handles and where it is kept
+
+| What | Where it is stored | Can the developer see it? |
 |---|---|---|
-| 판서(필기·텍스트·도형) | 기기 안(앱 전용 저장소) | 아니요 |
-| 수업 자료(PPTX·PDF·HTML·이미지) | 기기 안 · 사용자의 iCloud Drive | 아니요 |
-| 시간표·과목·단원·차시 | 기기 안 | 아니요 |
-| 앱 설정(판 색·펜·글꼴) | 기기 안 | 아니요 |
-| 구독 내역(초키보드 프로) | Apple 서버(App Store) | 아니요(Apple이 처리) |
-| 음성 명령의 소리 | 기기 안에서 글자로 바뀌고 저장하지 않음 | 아니요 |
-| 음성 명령의 받아쓴 글자 | 기기 안 — TypeSafe 키를 넣었을 때만 TypeSafe로 전송(5항) | 아니요 |
-| 선생님 목소리 특징값 | 기기 안(키체인) | 아니요 |
-| 교실 장면 추정(장면 이름·바뀐 시각) | 기기 안 메모리 — 수업이 끝나면 지움. '수업 흐름 남기기'를 켜면 7일 | 아니요 |
-| 음성 판단 기록 | 기기 안(동기화·백업 제외) — 30일 또는 50MB까지(8항) | 아니요 |
+| Board work (handwriting, text, shapes) | On the device (the app's private storage) | No |
+| Lesson materials (PPTX, PDF, HTML, images) | On the device · your iCloud Drive | No |
+| Timetable, subjects, units, lessons | On the device | No |
+| App settings (board color, pens, fonts) | On the device | No |
+| Subscription record (Chalkieboard Pro) | Apple's servers (App Store) | No (handled by Apple) |
+| Voice Commands audio | Turned into text on the device and not stored | No |
+| Voice Commands transcribed text | On the device — sent to TypeSafe only if you entered a TypeSafe key (Section 5) | No |
+| The teacher's voice feature values | On the device (Keychain) | No |
+| Classroom scene estimate (scene name, time of change) | In device memory — erased when the class ends. 7 days if 'Keep Class Timeline' is on | No |
+| Voice decision log | On the device (excluded from sync and backup) — up to 30 days or 50MB (Section 8) | No |
 
-**계정이 없습니다.** 초키보드는 회원가입을 받지 않으며, 이름·이메일·전화번호·
-학교명·학생 정보를 요구하지도, 수집하지도 않습니다.
-
----
-
-## 3. 기기 권한
-
-- **사진** — 사용자가 직접 고른 사진을 판서 면에 붙일 때만 씁니다. 앨범 전체를
-  훑거나 사진을 외부로 보내지 않습니다.
-- **iCloud Drive** — 사용자가 맥·윈도우에서 준비한 수업 자료를 아이패드에서
-  열기 위한 통로입니다. 파일은 **사용자 본인의 iCloud 계정**에 있고, 개발자
-  서버를 거치지 않습니다.
-- **외부 디스플레이(에어플레이·HDMI)** — 연결되면 판서 화면을 송출합니다.
-  송출은 화면 그림만 보내며 어떤 데이터도 저장하지 않습니다.
-- **마이크·음성 인식** — 설정에서 음성 명령(프로)을 켠 경우에만 씁니다. 소리는
-  **이 아이패드 안에서** 글자로 바뀌며(기기 안 받아쓰기), 녹음하거나 저장하지 않고
-  소리를 기기 밖으로 보내지 않습니다. 음성 명령을 켜려면 선생님 목소리를 등록해야 하며,
-  그 특징값(숫자 목록)은 기기의 키체인에만 저장합니다. 자주 쓰는 명령을
-  빠르게 알아듣기 위해 말의 지문(되돌릴 수 없는 해시값)과 명령 이름을 기기 안에
-  기억할 수 있습니다.
-- **교실 장면 추정** — 음성 명령이 켜진 수업 중에는 교실 소리를 **이 아이패드 안에서만**
-  살펴 지금이 설명·모둠 활동·발표 같은 어느 장면인지 짐작합니다. 쓰는 것은 목소리가
-  몇 개인지, 소리 크기, 선생님 목소리인지의 점수 같은 숫자뿐이고, 소리와 학생의 말은
-  녹음·저장하지 않으며 기기 밖으로 보내지 않습니다. 이 짐작은 음성 명령을 더 조심해서
-  실행하는 데만 씁니다.
+**There are no accounts.** Chalkieboard has no sign-up. It does not ask for or collect
+names, email addresses, phone numbers, school names or student information.
 
 ---
 
-## 4. 광고
+## 3. Device permissions
 
-무료로 쓰는 동안 **수업 시간을 충전하기 위해 사용자가 직접 선택해서 보는 보상형
-광고**만 있습니다. 광고 한 편을 보면 수업 시간 1시간이 충전됩니다. 앱이 스스로
-띄우는 배너나 전면 광고는 없고, 수업 중이나 송출 화면에는 광고가 나오지 않습니다.
-광고는 Google AdMob이 제공합니다.
-
-- 초키보드는 **개인화되지 않은 광고만** 요청합니다. 광고 식별자(IDFA)를 쓰지
-  않으며, iOS의 앱 추적 투명성(ATT) 권한을 요청하지 않습니다.
-- 그래도 AdMob은 광고를 보여 주고 부정 클릭을 막기 위해 IP 주소, 기기 종류 같은
-  기본 기술 정보를 처리합니다. 처리 내용: https://policies.google.com/technologies/partner-sites
-- 유럽 이용자에게는 광고를 띄우기 전에 동의 창(Google UMP)이 먼저 뜰 수 있습니다.
-- **초키보드 프로를 구독하면 수업 시간이 무제한이 되어 광고를 볼 필요가 없습니다.**
-
-초키보드는 광고 목적으로 사용자 데이터를 AdMob에 따로 넘기지 않습니다.
-
----
-
-## 5. 음성 명령의 뜻 판단(TypeSafe)
-
-음성 명령은 기본적으로 정해진 명령 표현만 알아듣습니다. 설정 ▸ 음성 제어에서
-**사용자 본인의 TypeSafe API 키**를 넣으면, 정해진 표현이 아닌 말도 뜻을 판단하기 위해
-다음이 TypeSafe(Jev)로 전송됩니다. 판단 비용은 그 키의 크레딧에서 나갑니다.
-
-- **받아쓴 교사의 말** — 호출어("초키야") 뒤에 한 말, 음성으로 한 일 뒤 8초 안에 이어 한 말,
-  그리고 호출어 없이 들린 말 가운데 화면의 자료·도구·단추 이름이나 기능(넘기기·타이머·밑줄·
-  받아 적기 등), 쪽 번호·시간이 들어 있는 말. 비슷하게 들린 다른 받아쓰기 후보도 함께 갑니다.
-  **말 속에 학생 이름이 있으면 그대로 전송됩니다.** 앱은 선생님 목소리로 판정된 말만 보내려고
-  하지만 판정이 완벽하지 않아, 학생의 말이 섞여 전송될 수 있습니다.
-- **화면의 상태** — 자료·도구·단추 이름, 보고 있는 자료와 쪽 번호, 들고 있는 도구, 쪽에 인쇄된
-  글 가운데 말과 겹치는 몇 줄, 그 줄에 이미 그어진 표시의 종류, 방금 음성으로 한 일.
-- **웹 화면의 글자(선택)** — 설정에서 '웹 화면 음성 조작'을 켠 경우에만, 열린 웹 화면의
-  단추·이름 글자 가운데 말과 겹치는 것. **학생 이름이 포함될 수 있습니다.** 이 설정은
-  기본으로 꺼져 있습니다.
-
-전송되지 않는 것: 소리, 교실 장면 추정, 판서, 수업 자료 파일, 사진.
-
-**국외 이전.** 받는 곳은 TypeSafe AI이고 서버는 미국에 있습니다. 목적은 말의 뜻 판단이고,
-전송은 말할 때마다 인터넷으로 이루어집니다. TypeSafe는 받은 글을 AI 학습에 쓰지 않고
-"서비스에 필요한 동안" 보관한다고 밝히며, 정해진 보관 기간은 없습니다. 또한 18세 미만
-아동의 개인정보를 알면서 받지 않는다고 밝힙니다(https://typesafe.ai/legal/privacy-policy).
-원하지 않으면 키를 넣지 않거나 지우면 되고, 음성 명령을 끄면 더 이상 전송되지 않습니다.
+- **Photos** — Used only when you attach a photo you chose yourself to the board surface.
+  The app does not browse your whole photo library and does not send photos externally.
+- **iCloud Drive** — The route for opening on the iPad the lesson materials you prepared
+  on a Mac or Windows PC. The files are in **your own iCloud account** and do not pass
+  through the developer's servers.
+- **External display (AirPlay, HDMI)** — When a display is connected, the app sends the
+  board screen to it. This output sends only the screen image and does not store any data.
+- **Microphone and speech recognition** — Used only if you turn on Voice Commands (Pro) in
+  Settings. Sound is turned into text **on this iPad** (on-device dictation). It is not
+  recorded or stored, and sound is not sent off the device. To turn on Voice Commands, the
+  teacher's voice must be registered. Its feature values (a list of numbers) are stored
+  only in the device's Keychain. To recognize frequently used commands quickly, the app may
+  remember on the device a fingerprint of what was said (a hash value that cannot be
+  reversed) and the command name.
+- **Classroom scene estimation** — During a class with Voice Commands on, the app examines
+  classroom sound **only on this iPad** to guess what kind of scene the class is in, such
+  as explanation, group activity or presentations. It uses only numbers, such as how many
+  voices there are, the volume, and a score for whether it is the teacher's voice. Sound
+  and students' speech are not recorded or stored, and are not sent off the device. This
+  guess is used only to carry out voice commands more carefully.
 
 ---
 
-## 6. 결제
+## 4. Ads
 
-초키보드 프로 구독은 **App Store 인앱 결제**로만 이루어집니다. 카드 번호 등 결제
-정보는 Apple이 처리하며, 앱과 개발자는 그 정보를 받지 않습니다. 구독 관리·해지는
-iOS 설정 ▸ Apple 계정 ▸ 구독에서 하실 수 있습니다.
+While you use the app for free, the only ads are **rewarded ads that you choose to watch
+yourself to top up class time**. Watching one ad adds 1 hour of class time. There are no
+banner or full-screen ads that the app shows on its own, and no ads appear during class or
+on the external display. Ads are provided by Google AdMob.
 
----
+- Chalkieboard requests **non-personalized ads only**. It does not use the advertising
+  identifier (IDFA) and does not ask for iOS App Tracking Transparency (ATT) permission.
+- Even so, AdMob processes basic technical information, such as IP address and device
+  type, to show ads and prevent fraudulent clicks. Details of this processing: https://policies.google.com/technologies/partner-sites
+- Users in Europe may first see a consent form (Google UMP) before an ad is shown.
+- **If you subscribe to Chalkieboard Pro, class time becomes unlimited, so you do not need to watch ads.**
 
-## 7. 아동의 개인정보
-
-초키보드는 **교사가 쓰는 도구**입니다. 아동을 대상으로 하지 않으며, 아동의
-개인정보를 수집하지 않습니다. 판서 화면에는 수업 중 개인정보가 드러나지 않도록
-상태 표시줄과 계정 표시를 숨깁니다.
-
-교사가 학생의 이름이나 사진을 판서 면에 직접 적거나 붙이면 그 내용은 **그 기기와
-그 교사의 iCloud에만** 남습니다. 그런 자료의 관리 책임은 학교와 교사에게 있으며,
-개발자는 접근할 수 없습니다.
-
-음성 명령(5항)에 TypeSafe 키를 넣어 쓰면, 교사가 말한 학생 이름과(예: "성후랑 현민이
-칭찬 카드") 선생님 목소리 판정을 비켜 간 학생의 말이 미국의 TypeSafe로 전송될 수 있습니다.
-'웹 화면 음성 조작'을 켜면 웹 화면에 보이는 학생 이름도 전송될 수 있습니다(기본값 꺼짐).
-학교와 교육청의 방침에 맞는지 확인한 뒤 써 주세요. 교실 장면 추정은 기기 안에서만 하며
-학생의 소리와 말을 저장하거나 보내지 않습니다.
+Chalkieboard does not separately pass user data to AdMob for advertising purposes.
 
 ---
 
-## 8. 보관과 삭제
+## 5. Interpreting what voice commands mean (TypeSafe)
 
-- 앱을 삭제하면 기기 안의 판서·자료·설정이 함께 지워집니다.
-- **음성 판단 기록** — 음성 명령을 고치기 위해 TypeSafe로 보낸 말과 판단 결과를 이 기기에만
-  남깁니다. 테스트 빌드(TestFlight)에서는 기본으로 켜져 있고 App Store 판에서는 꺼져 있습니다.
-  30일이 지나거나 50MB를 넘으면 오래된 것부터 지우고, 설정 ▸ 음성 제어에서 끄거나 지울 수
-  있습니다. 동기화·백업하지 않으며, 사용자가 직접 내보낼 때만 기기 밖으로 나갑니다.
-- **수업 흐름**('수업 흐름 남기기'를 켰을 때) — 장면 이름과 바뀐 시각만 7일 동안 남깁니다.
-- iCloud Drive의 `초키보드` 폴더는 사용자의 파일이므로 남습니다. 원하시면
-  파일 앱이나 파인더에서 직접 지우시면 됩니다.
-- 개발자가 보관하는 사용자 데이터는 **없습니다.** 따라서 열람·정정·삭제를
-  개발자에게 요청하실 일도 없습니다.
+By default, Voice Commands understands only set command phrases. If you enter **your own
+TypeSafe API key** in Settings ▸ Voice Control (Beta), the following is sent to TypeSafe
+(Jev) so that the meaning of speech that is not a set phrase can also be interpreted. The
+cost of interpretation is charged to that key's credits.
+
+- **The teacher's transcribed speech** — What is said after the wake word ("Hey Chalkie");
+  what is said within 8 seconds after an action done by voice; and, among speech heard
+  without the wake word, speech that contains the name of a material, tool or button on the
+  screen, a function (turning pages, timer, underline, taking dictation, etc.), a page
+  number or a time. Other transcription candidates that sounded similar are sent as well.
+  **If a student's name is in the speech, it is sent as is.** The app tries to send only
+  speech judged to be the teacher's voice, but this judgment is not perfect, so students'
+  speech may be mixed in and sent.
+- **Screen state** — Names of materials, tools and buttons; the material being viewed and
+  its page number; the tool currently selected; a few lines of text printed on the page
+  that overlap with what was said; the kinds of marks already drawn on those lines; and the
+  action just done by voice.
+- **Web page text (optional)** — Only if you turn on 'Web Page Voice Control' in Settings:
+  button and name text on the open web page that overlaps with what was said. **This may
+  include student names.** This setting is off by default.
+
+Not sent: sound, classroom scene estimates, board work, lesson material files, photos.
+
+**Transfer outside Korea.** The recipient is TypeSafe AI, and its servers are in the United
+States. The purpose is to interpret the meaning of what was said. The transfer takes place
+over the internet each time something is said. TypeSafe states that it does not use the
+text it receives for AI training and keeps it "for as long as needed for the service";
+there is no fixed retention period. TypeSafe also states that it does not knowingly
+receive personal information of children under 18 (https://typesafe.ai/legal/privacy-policy).
+If you do not want this, do not enter a key, or delete it. If you turn off Voice Commands,
+nothing more is sent.
 
 ---
 
-## 9. 제3자 제공
+## 6. Payment
 
-**제공하지 않습니다.** 초키보드는 사용자 데이터를 판매·대여·공유하지 않습니다.
-위 4·6항의 Google AdMob과 Apple, 그리고 사용자가 키를 넣은 경우의 5항 TypeSafe는 각자의 방침에 따라 자기 몫을 처리합니다.
-
----
-
-## 10. 방침이 바뀔 때
-
-내용이 바뀌면 이 페이지의 시행일을 고치고, 중요한 변경은 앱 안에서 알립니다.
+Chalkieboard Pro subscriptions are made only through **App Store in-app purchase**. Apple
+handles payment information such as card numbers. Neither the app nor the developer
+receives that information. You can manage or cancel your subscription in iOS Settings ▸
+Apple Account ▸ Subscriptions.
 
 ---
 
-## 11. 문의
+## 7. Children's personal information
 
-- 이메일: chalkieboard@207studio.dev
-- 개발자: 207 Studio
+Chalkieboard is **a tool used by teachers**. It is not directed at children and does not
+collect children's personal information. On the board screen, the status bar and account
+indicators are hidden so that personal information is not exposed during class.
 
-문의 메일은 답변 목적으로만 쓰고, 답변이 끝나면 지웁니다.
+If a teacher writes a student's name or attaches a student's photo on the board surface,
+that content stays **only on that device and in that teacher's iCloud**. The school and the
+teacher are responsible for managing such material. The developer cannot access it.
+
+If you use Voice Commands (Section 5) with a TypeSafe key, student names that the teacher
+says (for example, "praise cards for Seonghu and Hyeonmin") and students' speech that
+gets past the teacher-voice check may be sent to TypeSafe in the United States. If you turn
+on 'Web Page Voice Control', student names shown on a web page may also be sent (off by
+default). Please check that this fits the policies of your school and office of education
+before using it. Classroom scene estimation happens only on the device, and students'
+sound and speech are not stored or sent.
+
+---
+
+## 8. Retention and deletion
+
+- If you delete the app, the board work, materials and settings on the device are deleted
+  with it.
+- **Voice decision log** — To improve Voice Commands, the speech sent to TypeSafe and the
+  interpretation results are kept only on this device. The log is on by default in test
+  builds (TestFlight) and off in the App Store version. Once entries are older than 30 days
+  or the log exceeds 50MB, the oldest entries are deleted first. You can turn it off or
+  delete it in Settings ▸ Voice Control (Beta). It is not synced or backed up, and it
+  leaves the device only when you export it yourself.
+- **Class timeline** (when 'Keep Class Timeline' is on) — Only scene names and the times
+  they changed are kept, for 7 days.
+- The `Chalkieboard` folder in iCloud Drive holds your files, so it remains. If you want to
+  remove it, delete it yourself in the Files app or Finder.
+- The developer keeps **no** user data. So there is no need to ask the developer to access,
+  correct or delete your data.
+
+---
+
+## 9. Sharing with third parties
+
+**No data is provided to third parties.** Chalkieboard does not sell, rent or share user data.
+Google AdMob and Apple (Sections 4 and 6 above), and TypeSafe (Section 5, if you entered a key), each handle their own part under their own policies.
+
+---
+
+## 10. When this policy changes
+
+If this policy changes, the effective date on this page will be updated. Important changes
+will be announced in the app.
+
+---
+
+## 11. Contact
+
+- Email: chalkieboard@207studio.dev
+- Developer: 207 Studio
+
+Inquiry emails are used only to reply to you, and are deleted once the reply is complete.
