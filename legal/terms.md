@@ -3,6 +3,8 @@ title: Terms of Use — Chalkieboard
 permalink: /legal/terms/
 ---
 
+<script>(function(){try{var q=new URLSearchParams(location.search);if(q.get("lang")==="en"){localStorage.setItem("chalkieboard.lang","en");return}if(localStorage.getItem("chalkieboard.lang")==="en")return;var l=(navigator.languages&&navigator.languages[0])||navigator.language||"";if(/^ko(\b|-|_)/i.test(l))location.replace("/ko"+location.pathname+location.hash)}catch(e){}})();</script>
+
 # Terms of Use — Chalkieboard
 
 한국어: [이용약관](/ko/legal/terms/)

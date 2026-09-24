@@ -3,6 +3,8 @@ title: Chalkieboard
 permalink: /
 ---
 
+<script>(function(){try{var q=new URLSearchParams(location.search);if(q.get("lang")==="en"){localStorage.setItem("chalkieboard.lang","en");return}if(localStorage.getItem("chalkieboard.lang")==="en")return;var l=(navigator.languages&&navigator.languages[0])||navigator.language||"";if(/^ko(\b|-|_)/i.test(l))location.replace("/ko"+location.pathname+location.hash)}catch(e){}})();</script>
+
 # Chalkieboard
 
 Chalkieboard is a lesson board for teachers who teach from an iPad.

@@ -4,9 +4,11 @@ permalink: /ko/legal/privacy/
 lang: ko
 ---
 
+<script>try{localStorage.removeItem("chalkieboard.lang")}catch(e){}</script>
+
 # 개인정보처리방침 — 초키보드(Chalkieboard)
 
-English: [Privacy Policy](/legal/privacy/)
+English: [Privacy Policy](/legal/privacy/?lang=en)
 
 **시행일: 2026년 9월 24일**
 

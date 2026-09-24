@@ -4,9 +4,11 @@ permalink: /ko/legal/terms/
 lang: ko
 ---
 
+<script>try{localStorage.removeItem("chalkieboard.lang")}catch(e){}</script>
+
 # 이용약관 — 초키보드(Chalkieboard)
 
-English: [Terms of Use](/legal/terms/)
+English: [Terms of Use](/legal/terms/?lang=en)
 
 **시행일: 2026년 9월 24일**
 
