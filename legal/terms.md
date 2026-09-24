@@ -108,5 +108,5 @@ permalink: /legal/terms/
 
 ## 11. 문의
 
-- 이메일: chalkieboard@icloud.com
+- 이메일: chalkieboard@207studio.dev
 - 개발자: 207 Studio

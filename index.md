@@ -11,7 +11,7 @@ Chalkieboard is a lesson board for teachers who teach from an iPad.
 ## 문의 · Contact
 
 - 지원 · Support: <https://chalkieboard.notion.site/>
-- 이메일 · Email: **chalkieboard@icloud.com**
+- 이메일 · Email: **chalkieboard@207studio.dev**
 - 앱 안에서 · In the app: 설정 ▸ 정보 ▸ 의견 보내기 · Settings ▸ About ▸ Send Feedback
 
 ## 문서 · Documents

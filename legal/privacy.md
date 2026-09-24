@@ -168,7 +168,7 @@ iOS 설정 ▸ Apple 계정 ▸ 구독에서 하실 수 있습니다.
 
 ## 11. 문의
 
-- 이메일: chalkieboard@icloud.com
+- 이메일: chalkieboard@207studio.dev
 - 개발자: 207 Studio
 
 문의 메일은 답변 목적으로만 쓰고, 답변이 끝나면 지웁니다.
