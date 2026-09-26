@@ -8,3 +8,7 @@
 
 원본은 앱 저장소에 있고 여기는 그 사본입니다. 소스 코드는 이 저장소에 없습니다.
 문의: chalkieboard@207studio.dev
+
+지원: /support/ · /ko/support/
+테스터 안내: /beta/ · /ko/beta/
+신청자 표와 개인 신청 정보는 공개 저장소에 보관하지 않는다.
