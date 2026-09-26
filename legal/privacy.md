@@ -9,7 +9,7 @@ permalink: /legal/privacy/
 
 한국어: [개인정보처리방침](/ko/legal/privacy/)
 
-**Effective date: September 24, 2026**
+**Effective date: September 26, 2026**
 
 Chalkieboard is an iPad app that elementary school teachers use to write on the board
 during lessons. Because it is used in classrooms, it was **designed so that children's
@@ -25,9 +25,12 @@ materials, board work and timetables are kept only on your device and in your ow
 The developer cannot see them.
 
 There is one exception. **If you enter your own TypeSafe API key for Voice Commands (Pro)**,
-the teacher's transcribed speech (which may include student names) and some text on the
-screen are sent to TypeSafe in the United States so that the meaning of what was said can
-be interpreted (Section 5). The audio itself never leaves the device in any case.
+the teacher's transcribed speech (which may include student names), some text on the
+screen and, during a class, a few facts the app observed in the classroom sound are sent
+to TypeSafe in the United States. If you separately enable Student Speech Context, recent
+student and other non-teacher transcripts may be included in that same request so
+that the meaning of what was said can be interpreted (Section 5). The audio itself never
+leaves the device in any case.
 
 ---
 
@@ -62,17 +65,23 @@ names, email addresses, phone numbers, school names or student information.
   board screen to it. This output sends only the screen image and does not store any data.
 - **Microphone and speech recognition** — Used only if you turn on Voice Commands (Pro) in
   Settings. Sound is turned into text **on this iPad** (on-device dictation). It is not
-  recorded or stored, and sound is not sent off the device. To turn on Voice Commands, the
-  teacher's voice must be registered. Its feature values (a list of numbers) are stored
-  only in the device's Keychain. To recognize frequently used commands quickly, the app may
+  recorded or stored, and sound is not sent off the device. **Verify teacher voice** is a separate option,
+  off by default. Voice enrollment is required only when this verification is enabled.
+  Voice feature values (a list of numbers) are stored only in the device's Keychain.
+  With verification off, commands are interpreted from speech heard by the microphone without an identity check.
+  You can stop listening with the microphone button. To recognize frequently used commands quickly, the app may
   remember on the device a fingerprint of what was said (a hash value that cannot be
   reversed) and the command name.
 - **Classroom scene estimation** — During a class with Voice Commands on, the app examines
   classroom sound **only on this iPad** to guess what kind of scene the class is in, such
   as explanation, group activity or presentations. It uses only numbers, such as how many
   voices there are, the volume, and a score for whether it is the teacher's voice. Sound
-  and students' speech are not recorded or stored, and are not sent off the device. This
-  guess is used only to carry out voice commands more carefully.
+  is not sent off the device. Recent transcribed student speech may be sent only when
+  Student Speech Context is enabled (Section 5). This
+  guess is used only to carry out voice commands more carefully. The scene guess (scene
+  names and probabilities) is not sent off the device. However, if you use a TypeSafe key, a
+  few facts from this observation are included in the request that interprets what was
+  said (Section 5).
 
 ---
 
@@ -101,23 +110,45 @@ TypeSafe API key** in Settings ▸ Voice Control (Beta), the following is sent t
 (Jev) so that the meaning of speech that is not a set phrase can also be interpreted. The
 cost of interpretation is charged to that key's credits.
 
-- **The teacher's transcribed speech** — What is said after the wake word ("Hey Chalkie");
+- **Transcripts of voice-command candidates** — What is said after the wake word ("Hey Chalkie");
   what is said within 8 seconds after an action done by voice; and, among speech heard
   without the wake word, speech that contains the name of a material, tool or button on the
   screen, a function (turning pages, timer, underline, taking dictation, etc.), a page
   number or a time. Other transcription candidates that sounded similar are sent as well.
-  **If a student's name is in the speech, it is sent as is.** The app tries to send only
-  speech judged to be the teacher's voice, but this judgment is not perfect, so students'
-  speech may be mixed in and sent.
+  **If a student's name is in the speech, it is sent as is.** With teacher verification off,
+  speech from students or other people may also be sent as command candidates. Verification is not perfect
+  when enabled, and interpretation requests precede the separate execution check; transmission is not
+  guaranteed to contain only the teacher's speech.
 - **Screen state** — Names of materials, tools and buttons; the material being viewed and
   its page number; the tool currently selected; a few lines of text printed on the page
   that overlap with what was said; the kinds of marks already drawn on those lines; and the
-  action just done by voice.
+  action just done by voice. For text lines observed on the current screen, the same request
+  may also include their source, normalized screen positions, and literal spans matching the speech.
 - **Web page text (optional)** — Only if you turn on 'Web Page Voice Control' in Settings:
-  button and name text on the open web page that overlaps with what was said. **This may
-  include student names.** This setting is off by default.
+  the names and kinds of buttons and input fields on the open web page (up to 253, starting
+  with those that overlap with what was said). **This may include student names.** This
+  setting is off by default.
+- **Facts about the classroom sound (during a class)** — Facts this iPad observed in the
+  classroom sound: whose sound is heard right now (the teacher, one student, several
+  students, quiet, or the app's own video); whether a student's voice was heard just before
+  the speech; how loud the teacher's voice is (low, normal, loud); an activity the teacher
+  announced (as read from the teacher's words) or chose by hand, and how many seconds ago;
+  and the order and timing of the voice segments in the speech (teacher, student, several
+  students, the app's video, unsure). These are only words and numbers set by the app; they
+  contain no sound and no text. Anything unknown is not sent.
+- **Recent student speech context (optional)** — Transcripts of students' speech are transmitted to TypeSafe in the United States.
+  If you turn on Student Speech Context, the existing voice-command request can include up to two recent transcripts
+  (at most 160 characters each, from the previous 20 seconds). A segment with evidence of another, non-teacher voice
+  may also be included and is labelled `other`, since that voice is not necessarily a student. Segments with unknown
+  speaker identity are excluded. This setting is off by default. No additional request is made for this context.
+  Enabling it does not replace teacher-voice verification or grant permission to run commands.
 
-Not sent: sound, classroom scene estimates, board work, lesson material files, photos.
+Not sent to TypeSafe: sound, the teacher's voice features and voice similarity score (used on this iPad), classroom scene estimates (scene names and probabilities), board work,
+lesson material files, photos.
+For the built-in speaker and microphone route, the app attempts echo processing on this iPad.
+**When Verify teacher voice is enabled**, execution is allowed or held according to the registered-voice check.
+This option is independent of continuous speaker analysis and student speech context. With verification off,
+identity-check failures do not block commands; the other interpretation and execution conditions remain.
 
 **Transfer outside Korea.** The recipient is TypeSafe AI, and its servers are in the United
 States. The purpose is to interpret the meaning of what was said. The transfer takes place
@@ -150,12 +181,13 @@ that content stays **only on that device and in that teacher's iCloud**. The sch
 teacher are responsible for managing such material. The developer cannot access it.
 
 If you use Voice Commands (Section 5) with a TypeSafe key, student names that the teacher
-says (for example, "praise cards for Seonghu and Hyeonmin") and students' speech that
-gets past the teacher-voice check may be sent to TypeSafe in the United States. If you turn
+says (for example, "praise cards for Seonghu and Hyeonmin") and speech from students or other people
+recognized as command candidates may be sent to TypeSafe in the United States. If you turn
 on 'Web Page Voice Control', student names shown on a web page may also be sent (off by
 default). Please check that this fits the policies of your school and office of education
-before using it. Classroom scene estimation happens only on the device, and students'
-sound and speech are not stored or sent.
+before using it. Classroom scene estimation happens only on the device. Students' audio
+is not sent. Classroom facts describe who spoke and when; only if Student Speech Context
+is separately enabled can recent transcribed words join the same request (Section 5).
 
 ---
 
@@ -163,8 +195,12 @@ sound and speech are not stored or sent.
 
 - If you delete the app, the board work, materials and settings on the device are deleted
   with it.
-- **Voice decision log** — To improve Voice Commands, the speech sent to TypeSafe and the
-  interpretation results are kept on this device, with a copy in the `판단기록` (decision log)
+- **Voice decision log** — New entries keep only metadata: IDs, stages and types, model name,
+  timing, result codes, counts, and diagnostic numbers or fixed states such as voice similarity scores,
+  analysis intervals and verification settings. They do not retain transcribed words, request or response
+  bodies, audio or voice features. Entries made by the previous log format
+  may still exist and may contain the original speech and interpretation results; this update
+  does not delete them. The log is kept on this device, with a copy in the `판단기록` (decision log)
   folder inside the `Chalkieboard` folder of your own iCloud Drive. It is not sent to the
   developer. The log is on by default in test builds (TestFlight) and off in the App Store
   version. Once entries are older than 30 days or the log exceeds 50MB, the oldest entries are

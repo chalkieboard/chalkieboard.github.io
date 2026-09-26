@@ -13,7 +13,7 @@ Chalkieboard is a lesson board for teachers who teach from an iPad.
 
 ## Contact
 
-- Support: <https://chalkieboard.notion.site/>
+- Support: <https://chalkieboard.207studio.dev/support/>
 - Email: **chalkieboard@207studio.dev**
 - In the app: Settings ▸ About ▸ Send Feedback
 
@@ -23,3 +23,5 @@ Chalkieboard is a lesson board for teachers who teach from an iPad.
 - [Terms of Use](/legal/terms/)
 
 © 2026 207 Studio
+
+- TestFlight: [Join the test](/beta/)

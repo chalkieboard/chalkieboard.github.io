@@ -14,7 +14,7 @@ English: [Chalkieboard](/?lang=en)
 
 ## 문의
 
-- 지원: <https://chalkieboard.notion.site/>
+- 지원: <https://chalkieboard.207studio.dev/ko/support/>
 - 이메일: **chalkieboard@207studio.dev**
 - 앱 안에서: 설정 ▸ 정보 ▸ 의견 보내기
 
@@ -24,3 +24,5 @@ English: [Chalkieboard](/?lang=en)
 - [이용약관](/ko/legal/terms/)
 
 © 2026 207 Studio
+
+- TestFlight: [테스터 안내](/ko/beta/)
