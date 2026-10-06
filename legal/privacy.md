@@ -11,29 +11,29 @@ permalink: /legal/privacy/
 
 **Effective date: October 6, 2026**
 
-Chalkieboard is an iPad app that elementary school teachers use to write on the board
-during lessons. Because it is used in classrooms, it was **designed so that children's
-information has no reason to enter the app**. This document describes that design
-exactly as it is.
+Chalkieboard is an iPad tool for teachers and presenters. It does not provide student
+accounts or ask teachers to register student identities. Lesson materials, handwriting
+and spoken commands can still contain personal information. This policy explains local
+processing and the optional sharing described below.
 
 ---
 
-## 1. One-line summary
+## 1. Summary
 
-**Chalkieboard does not send personal information to the developer's servers.** Your lesson
-materials, board work and timetables are kept only on your device and in your own iCloud.
-The developer cannot see them.
+**Chalkieboard does not send your lesson files, board images or timetable to the developer's
+servers.** They are kept on your device and, when you choose to use it, in your own iCloud.
+The developer cannot access them.
 
-**The current release does not include TypeSafe/Jev.** It has no TypeSafe key-entry or
-student-context transmission option, and it does not send voice transcripts, screen
-context or student speech to TypeSafe. The app's Voice Commands use Apple's on-device
-speech recognition. Separate Siri actions are handled through Apple's system Siri
-(Section 5.1).
+**The version with a Use Jev setting keeps Jev off by default, including after an update
+with a previously saved TypeSafe key.** The app's Voice Commands use Apple's on-device
+speech recognition. With Jev off, supported commands are interpreted on this iPad and
+no connection checks, connection prewarming or interpretation requests go to TypeSafe.
+If you explicitly consent, turn on Jev and provide your own TypeSafe key, selected command
+transcripts and screen context are sent to TypeSafe AI in the United States (Section 5.2).
 
-**Earlier TestFlight builds with TypeSafe enabled have different processing.** If you
-still use one of those builds with your own TypeSafe key, transcripts and selected
-context may be sent to TypeSafe in the United States. Section 5.2 retains that disclosure;
-this policy update does not disable an earlier installed build.
+Build `202610061343` does not include Jev. Earlier TypeSafe-enabled TestFlight builds have
+different controls and may also send optional student speech context (Section 5.3).
+Updating this policy does not change the behavior of an earlier installed build.
 
 ---
 
@@ -47,15 +47,17 @@ this policy update does not disable an earlier installed build.
 | App settings (board color, pens, fonts) | On the device | No |
 | Subscription record (Chalkieboard Pro) | Apple's servers (App Store) | No (handled by Apple) |
 | The app's Voice Commands audio | Turned into text on the device and not stored | No |
-| Voice Commands transcribed text | On the device in the current release; earlier TestFlight TypeSafe processing is described in Section 5.2 | No |
+| Voice Commands transcribed text and selected screen context | On the device with Jev off; sent to TypeSafe with consent and Jev on (Section 5.2). Earlier builds: Section 5.3 | No |
 | System Siri requests | Handled by Apple under your Siri settings and Apple's policies; the app receives the requested action | No (handled by Apple) |
-| TypeSafe keys stored by an earlier build | In this device's Keychain; unused by the current release and not deleted by this update | No |
+| Your TypeSafe API key, including a previously stored key | In this device's Keychain; used to authenticate TypeSafe requests only with Jev on. Turning Jev off keeps the key | No |
 | The teacher's voice feature values | On the device (Keychain) | No |
 | Classroom scene estimate (scene name, time of change) | In device memory — erased when the class ends. 7 days if 'Keep Class Timeline' is on | No |
-| Earlier builds' voice decision log | On the device and in your own iCloud Drive (`Chalkieboard/판단기록`, excluded from backup) — up to 30 days or 50MB (Section 8) | No |
+| Earlier builds' voice decision log | Existing device and personal iCloud Drive files are preserved; the current version does not resume writing or automatic cleanup (Section 8) | No |
 
-**There are no Chalkieboard accounts.** Chalkieboard has no sign-up. It does not ask for or collect
-names, email addresses, phone numbers, school names or student information.
+**There are no Chalkieboard accounts.** Chalkieboard has no sign-up and does not ask you
+to register names, email addresses, phone numbers, school names or student identities.
+Personal information in your content or spoken commands may be processed as described
+in Sections 5 and 7.
 Your Apple account for iCloud or the App Store, and any sign-in required by a website
 you open, are separate from Chalkieboard. Websites handle their own services under their
 own policies.
@@ -80,18 +82,21 @@ own policies.
   You can stop listening with the microphone button. To recognize frequently used commands quickly, the app may
   remember on the device a fingerprint of what was said (a hash value that cannot be
   reversed) and the command name.
-- **System Siri** — The separate next-page, previous-page, pen and eraser actions use
-  Apple's system Siri and App Intents. Siri's speech processing is governed by your Siri
-  settings and Apple's policies. The app receives the action to perform. This is
-  separate from the app's microphone-based Voice Commands.
+- **System actions and Siri** — App Intents expose voice on/off, open lesson, next/previous
+  page and pen/eraser actions to Siri and Shortcuts. When invoked through Siri, speech
+  processing follows your Siri settings and Apple's policies. The app receives the action
+  to perform. These system entry points are separate from the app's microphone-based
+  Voice Commands and do not use Jev (Section 5.1).
 - **Classroom scene estimation** — During a class with Voice Commands on, the app examines
   classroom sound **only on this iPad** to guess what kind of scene the class is in, such
   as explanation, group activity or presentations. It uses only numbers, such as how many
   voices there are, the volume, and a score for whether it is the teacher's voice. Sound
   is not sent off the device. This guess is used only to carry out voice commands more
   carefully. The scene guess (scene names and probabilities) is not sent off the device.
-  The current release does not send student transcripts or classroom facts to TypeSafe.
-  Earlier TestFlight builds with TypeSafe enabled are described in Section 5.2.
+  With Jev on, separate classroom facts such as sound-source labels, loudness and segment
+  timing may be sent with a command request (Section 5.2). These facts contain no audio
+  or transcript text. Extra recent student context and per-voice transcripts are absent
+  from the current version; their use in earlier builds is described in Section 5.3.
 
 ---
 
@@ -113,64 +118,107 @@ Chalkieboard does not separately pass user data to AdMob for advertising purpose
 
 ---
 
-## 5. Voice Commands and Siri
+## 5. Voice Commands, optional Jev and system actions
 
-### 5.1. Current release without TypeSafe/Jev
+### 5.1. Apple speech and commands on this iPad
 
-The app recognizes Voice Commands with Apple's on-device speech APIs and interprets
-supported commands with rules on this iPad. The microphone and speech-recognition
-permissions in Section 3 apply when you enable this feature. Language support depends
-on the device, OS and Apple's available language assets; downloading an asset may need
-an internet connection.
+The app transcribes microphone audio with Apple's on-device speech APIs and uses rules on
+this iPad for supported commands. This does not require saying “Hey Siri” or turning on
+Siri. If Only Listen After Wake Word is off, the app's own wake word is not required either.
+Voice Commands requires Pro and the microphone/speech permissions in Section 3. Language
+support depends on the device, OS and Apple's language assets; downloading an asset may
+need internet. If on-device recognition is unavailable, the app does not silently switch
+to server speech recognition.
 
-There is no TypeSafe key-entry option in this release. TypeSafe/Jev requests, web-context
-transmission and student-speech-context transmission are disabled, including when an
-earlier build stored a key or enabled those options. The update does not erase stored
-keys or existing voice logs (Section 8).
+With Jev off, supported page/tool commands, supported Korean polite expressions, uniquely
+matched material names, explicit English/Korean dictation or reveal commands and uniquely
+matched visible app-button names are handled on this iPad. This is a defined set of commands;
+it does not promise to understand every sentence. Highlighting selected text and more
+flexible requests can use Jev when you choose to enable it.
 
-The separate System Siri actions turn to the next or previous page, or select the pen
-or eraser. Apple's system Siri processes the Siri request according to your settings
-and Apple's policies. Chalkieboard receives the requested action through App Intents;
-it does not record Siri audio. These actions do not use TypeSafe/Jev.
+The separate App Intents actions turn Voice Commands on/off, open a lesson, turn to the
+next/previous page or select pen/eraser. They can be invoked through Shortcuts or system
+controls. You can also configure Apple's Vocal Shortcuts in iPad accessibility settings
+for a spoken phrase without “Hey Siri”; this is a separate system feature you set up.
+When you use Siri, Apple processes that request according to your Siri settings and policies.
+Chalkieboard receives the requested action, does not record Siri audio and does not use
+TypeSafe for those actions.
 
-### 5.2. Earlier TestFlight builds with TypeSafe enabled
+### 5.2. Optional Jev in the version with a Use Jev setting
 
-This subsection applies only to earlier TestFlight builds that include TypeSafe/Jev.
-An earlier installed build can still transmit data when you enable that feature. The
-disclosures below describe those builds, not the current release without TypeSafe/Jev.
+Jev is off by default, even with an API key stored by an earlier version. Saving a key does
+not enable Jev or check the connection. Before enabling Jev for the first time, the app
+asks for explicit permission to share the listed command text and context with TypeSafe AI
+in the United States. If this disclosure changes, permission is required for the new version.
+You need your own TypeSafe API key, an internet connection and available TypeSafe credits.
+Interpretation costs are charged to that key's credits, separately from Chalkieboard Pro.
 
-By default, Voice Commands understands only set command phrases. If you enter **your own
-TypeSafe API key** in Settings ▸ Voice Control (Beta), the following is sent to TypeSafe
-(Jev) so that the meaning of speech that is not a set phrase can also be interpreted. The
-cost of interpretation is charged to that key's credits.
+With Jev on, command candidates admitted by the app may be sent for interpretation:
 
-- **Transcripts of voice-command candidates** — What is said after the wake word ("Hey Chalkie");
-  what is said within 8 seconds after an action done by voice; and, among speech heard
-  without the wake word, speech that contains the name of a material, tool or button on the
-  screen, a function (turning pages, timer, underline, taking dictation, etc.), a page
-  number or a time. Other transcription candidates that sounded similar are sent as well.
-  **If a student's name is in the speech, it is sent as is.** With teacher verification off,
-  speech from students or other people may also be sent as command candidates. Verification is not perfect
-  when enabled, and interpretation requests precede the separate execution check; transmission is not
-  guaranteed to contain only the teacher's speech.
-- **Screen state** — Names of materials, tools and buttons; the material being viewed and
-  its page number; the tool currently selected; some of the text on the page being
-  viewed; the kinds of marks already drawn on that text; and the action just done by voice.
-  For text lines observed on the screen, the same request may also include their source,
-  normalized screen positions, and literal spans matching the speech. **If that text includes
-  student names, they may be sent as well.**
-- **Web page text (optional)** — Only if you turn on 'Web Page Voice Control' in Settings:
-  the names and kinds of buttons and input fields on the open web page (up to 253, starting
-  with those that overlap with what was said). **This may include student names.** This
-  setting is off by default.
-- **Facts about the classroom sound (during a class)** — Facts this iPad observed in the
-  classroom sound: whose sound is heard right now (the teacher, one student, several
-  students, quiet, or the app's own video); whether a student's voice was heard just before
-  the speech; how loud the teacher's voice is (low, normal, loud); an activity the teacher
-  announced (as read from the teacher's words) or chose by hand, and how many seconds ago;
-  and the order and timing of the voice segments in the speech (teacher, student, several
-  students, the app's video, unsure). These are only words and numbers set by the app; they
-  contain no sound and no text. Anything unknown is not sent.
+- **Command transcripts and alternative transcriptions** — Speech after the app's wake
+  word, short follow-ups within 8 seconds of a voice action, or speech without the wake word
+  that matches a material, tool, button, function, page number or time. **Personal names in
+  that speech can be sent as written.** Microphone commands may come from students or other
+  people when teacher verification is off. Verification does not perfectly identify a
+  speaker, and interpretation and execution checks are separate; transmission is not
+  guaranteed to contain only the teacher's words.
+- **Selected screen context** — Material, tool and button names; the current material/page
+  and tool; matching page text and marks on it; source, normalized screen position and
+  matching spans of observed text; recent voice actions and state of visible app controls.
+  **Personal information in these names or text can be included.** The app sends selected
+  text/context, not the full document file, photo or a recording of the board screen.
+- **Classroom sound facts** — App-produced labels/numbers for the sound source (teacher,
+  student, several voices, silence or app media), whether a student voice preceded the
+  command, loudness, an announced or manually chosen activity and elapsed time, and the
+  order/timing of voice segments. App-produced activity/floor labels from earlier judgments
+  and their elapsed times may also be included. These facts contain no audio or transcript text.
+- **Web context, only with a separate choice** — Web Page Voice Control is off by default,
+  including after updating from an older enabled setting. If you turn it on as well as Jev,
+  the current web page title, button/input names and kinds (up to 253, ranked by overlap with
+  the speech), permitted action types and matching visible page text can be sent. They may
+  contain student names or other personal information. Opening a website by itself does
+  not enable this Jev option; websites otherwise operate under their own policies.
+
+Raw microphone audio, voice feature values and voice similarity scores are not sent to
+TypeSafe. The current version does not add recent student-speech context or per-voice
+transcript turns to requests. Activity/floor labels are separate text-free classroom facts. It does not resume
+Jev decision logging when Jev is enabled. This does not exclude a student's words or name
+from a command candidate or visible text described above.
+
+While Jev is on, the app may prepare a connection to TypeSafe. Check Connection sends a
+fixed test command. TypeSafe receives the API key for authentication and the network
+information needed to handle those requests. Turning Use Jev off stops new interpretation,
+prewarming and connection-check requests, cancels pending requests and ignores their late
+results. It keeps your key, materials and existing logs. It cannot retract data a service
+has already received. To stop microphone commands too, turn Voice Commands off.
+
+TypeSafe is the recipient of the optional text/context transfer and hosts its services in
+the United States. Its [privacy policy](https://typesafe.ai/legal/privacy-policy) states that
+it collects submitted prompts, data and other Input, may collect technical/usage information,
+and does not train or fine-tune models on Input. It retains personal data for as long as
+reasonably necessary for its services or business/commercial purposes; no fixed number of
+days is specified. TypeSafe also states that its service is not directed to children and
+that it does not knowingly collect, maintain or use personal data from children under 18.
+
+[TypeSafe's legal documentation](https://docs.typesafe.ai/legal) offers zero data retention
+to enterprise customers. Chalkieboard does not assume that an ordinary personal API key
+has that arrangement or promise immediate deletion. Disabling Jev is not a server-side
+deletion request; contact TypeSafe about information it has already received.
+
+### 5.3. Previously installed TestFlight builds
+
+Build `202610061343` excludes TypeSafe/Jev: there is no key-entry or transmission option,
+and a previously saved key is unused for TypeSafe connections. It preserves existing keys
+and logs. It is distinct from the version with the Use Jev toggle described in Section 5.2.
+
+Earlier TypeSafe-enabled TestFlight builds can still send the command-candidate, screen,
+web and classroom context described above while Voice Commands is on and a key is available.
+They do not have the new independent Use Jev consent control. Updating this policy does
+not disable an installed older build. To prevent its interpretation requests, avoid entering
+a key, remove any saved key in that build's settings, or turn off Voice Commands.
+
+Those older builds can also have these separately enabled transcript-context features:
+
 - **Recent student speech context (optional)** — Transcripts of students' speech are transmitted to TypeSafe in the United States.
   If you turn on Student Speech Context, the existing voice-command request can include up to two recent transcripts
   (at most 160 characters each, from the previous 20 seconds). A segment with evidence of another, non-teacher voice
@@ -188,23 +236,10 @@ cost of interpretation is charged to that key's credits.
   without the wake word as a command; commands called with the wake word are never blocked by them. This setting is off
   by default and no additional request is made for these turns.
 
-Not sent to TypeSafe: sound, the teacher's voice features and voice similarity score (used on this iPad), classroom scene estimates (scene names and probabilities), board work,
-lesson material files, photos.
-For the built-in speaker and microphone route, the app attempts echo processing on this iPad.
-**When Verify teacher voice is enabled**, execution is allowed or held according to the registered-voice check.
-This option is independent of continuous speaker analysis and student speech context. With verification off,
-identity-check failures do not block commands; the other interpretation and execution conditions remain.
 
-**Transfer outside Korea.** The recipient is TypeSafe AI, and its servers are in the United
-States. The purpose is to interpret the meaning of what was said. The transfer takes place
-over the internet each time something is said. TypeSafe states that it does not use the
-text it receives for AI training and keeps it "for as long as needed for the service";
-there is no fixed retention period. TypeSafe also states that it does not knowingly
-receive personal information of children under 18 (https://typesafe.ai/legal/privacy-policy).
-If you still use an earlier build and do not want this transfer, do not enter a key, or
-remove it in that build's settings. Turning off Voice Commands in that build stops its
-voice-interpretation requests. Installing the release without TypeSafe/Jev disables
-this transmission without deleting an existing key or log.
+These older features do not replace teacher verification or grant permission to execute
+commands. Raw audio and voice features remain on the device. Their optional transcript
+sharing and old logging behavior are not resumed by installing the current version.
 
 ---
 
@@ -213,30 +248,28 @@ this transmission without deleting an existing key or log.
 Chalkieboard Pro subscriptions are made only through **App Store in-app purchase**. Apple
 handles payment information such as card numbers. Neither the app nor the developer
 receives that information. You can manage or cancel your subscription in iOS Settings ▸
-Apple Account ▸ Subscriptions.
+Apple Account ▸ Subscriptions. Optional Jev interpretation is charged by TypeSafe to
+your own API key; Chalkieboard does not sell TypeSafe credits or take that payment (Section 5.2).
 
 ---
 
 ## 7. Children's personal information
 
-Chalkieboard is **a tool used by teachers**. It is not directed at children and does not
-collect children's personal information. On the board screen, the status bar and account
-indicators are hidden so that personal information is not exposed during class.
+Chalkieboard is a tool for teachers, not a student account service. A teacher may include
+student names, photos or other personal information in lesson materials or board work.
+Those files stay on the device and, if chosen, in the teacher's iCloud. The developer
+cannot access them.
 
-If a teacher writes a student's name or attaches a student's photo on the board surface,
-that content stays **on that device and in that teacher's iCloud**. The current release
-does not send student names, page text or student transcripts to TypeSafe/Jev. The school
-and the teacher are responsible for managing such material. The developer cannot access it.
+With Jev off, the app sends no command transcripts or screen context to TypeSafe. With
+Jev on, a student's name or words in a command candidate, material/button name or matching
+page text may be sent to TypeSafe in the United States (Section 5.2), even though extra
+recent student context is unavailable. Web context requires its separate choice. Raw
+student audio is not sent. Earlier builds may also transmit the optional recent student
+and per-voice transcripts described in Section 5.3.
 
-In earlier TestFlight builds with TypeSafe enabled (Section 5.2), student names that the teacher
-says (for example, "praise cards for Seonghu and Hyeonmin"), speech from students or other people
-recognized as command candidates, and some of the text on the page being viewed (including any student
-names written there) may be sent to TypeSafe in the United States. If you turn
-on 'Web Page Voice Control', student names shown on a web page may also be sent (off by
-default). Please check that this fits the policies of your school and office of education
-before using it. Classroom scene estimation happens only on the device. Students' audio
-is not sent. Classroom facts describe who spoke and when; only if Student Speech Context
-or continuous speaker analysis is separately enabled can recent transcribed words join the same request (Section 5.2).
+Use Jev only for information you are authorized to share, following your school and office
+of education's rules and applicable requirements for children's data. A teacher's consent
+to Jev does not by itself establish permission to share another person's information.
 
 ---
 
@@ -244,9 +277,10 @@ or continuous speaker analysis is separately enabled can recent transcribed word
 
 - If you delete the app, the board work, materials and settings on the device are deleted
   with it.
-- **Keys from earlier TypeSafe-enabled builds** — This update does not delete a key
-  previously stored in the device's Keychain. The current release does not read or use
-  that key for a TypeSafe connection.
+- **TypeSafe keys** — This update preserves a previously stored key in this device's
+  Keychain. Saving a key or turning Jev off does not enable interpretation or erase the
+  key. You can remove the key in Settings ▸ Voice Control (Beta); removing it also turns
+  Jev off and cancels pending requests. An existing key alone is not permission to send data.
 - **Earlier TypeSafe-enabled builds' voice decision log** — In those earlier builds,
   new entries keep only metadata: IDs, stages and types, model name,
   timing, result codes, counts, and diagnostic numbers or fixed states such as analysis
@@ -280,8 +314,8 @@ Chalkieboard does not sell or rent user data. Google AdMob (Section 4), Apple se
 including iCloud, the App Store and System Siri (Sections 3, 5.1 and 6), and websites you
 choose to open handle their own services under their own policies.
 
-The current release does not send data to TypeSafe/Jev. For earlier TestFlight builds
-with TypeSafe enabled, the optional transfer to TypeSafe is described in Section 5.2.
+TypeSafe/Jev is an optional recipient only when you consent and enable Jev, as described
+in Section 5.2. Previously installed TestFlight builds have the behavior in Section 5.3.
 
 ---
 
